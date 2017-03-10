@@ -6,9 +6,15 @@
     "url": "https://github.com/jberry93/integrations-test.git",
     "type": "git"
   },
+  "scripts": {
+    "build": "./node_modules/.bin/webpack-dev-server"
+  },
   "author": "Jeffrey Berry <jeffreyberry93@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "vue": "^2.2.2"
+  },
+  "devDependencies": {
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   }
