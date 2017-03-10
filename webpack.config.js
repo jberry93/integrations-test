@@ -1,9 +1,9 @@
 'use strict';
 
-const path = require('path');
-const webpack = require('webpack');
+var path = require('path');
+var webpack = require('webpack');
 
-const config = {
+var config = {
   entry: './app/src/app.js',
   output: {
     filename: 'bundle.js',
