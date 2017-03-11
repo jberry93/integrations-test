@@ -2,6 +2,7 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var rules = require('./webpack.rules');
 var prod = (process.env.NODE_ENV === 'production');
 
 var config = {
@@ -14,27 +15,12 @@ var config = {
     path: path.resolve(__dirname, 'app/dist'),
     filename: '[name].js'
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
-      }
-    ]
-  },
+  module: {rules},
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     }
   },
-  plugins: [
-    
-  ],
   devServer: {
     contentBase: path.join(__dirname, "./"),
     compress: true,
