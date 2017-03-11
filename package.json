@@ -7,7 +7,9 @@
     "type": "git"
   },
   "scripts": {
-    "build": "./node_modules/.bin/webpack-dev-server"
+    "dev": "./node_modules/.bin/webpack --config webpack.config.js --progress --profile",
+    "prod": "./node_modules/.bin/webpack --config webpack.config.js --progress --profile -p",
+    "server": "./node_modules/.bin/webpack-dev-server"
   },
   "author": "Jeffrey Berry <jeffreyberry93@gmail.com>",
   "license": "MIT",
@@ -15,6 +17,13 @@
     "vue": "^2.2.2"
   },
   "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-env": "^1.2.1",
+    "css-loader": "^0.27.1",
+    "vue-loader": "^11.1.4",
+    "vue-template-compiler": "^2.2.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   }
