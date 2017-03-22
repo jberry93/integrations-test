@@ -6,6 +6,7 @@ var rules = require('./webpack.rules');
 var prod = (process.env.NODE_ENV === 'production');
 
 var config = {
+  cache: true,
   entry: {
     app: [
       './app/src/app.js'

@@ -4,7 +4,10 @@ var rules = [
   {
     test: /\.js$/,
     exclude: /node_modules/,
-    loader: 'babel-loader'
+    loader: 'babel-loader',
+    options: {
+      cacheDirectory: true
+    }
   },
   {
     test: /\.vue$/,
